@@ -40,6 +40,9 @@ function inputToList(e) {
     result.style.display = "none";
     message.innerText = "";
     error.innerText = ` * Error: Please Enter Some Values , Tree Cannot Be Empty.`;
+    setTimeout(()=>{
+    error.innerText=``;
+    },4000);
     return;
   } else {
     result.style.display = "flex";
@@ -55,6 +58,9 @@ function inputToList(e) {
       error.style.display = "block";
       error.innerHTML =
         "Please Check All The Rules First , Only Numbers Are Allowed !!";
+      setTimeout(()=>{
+      error.innerHTML=``;
+      },4000);
       return;
     }
 
